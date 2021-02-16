@@ -1,0 +1,206 @@
+*{
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+}
+main{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+#navigation-container{
+    background-color: #1D1D1D;
+    height: 100vh;
+    position: relative;
+    width: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navigation-container > ul{
+    height: 90vh;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#navigation-container > ul > li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7vh;
+}
+
+#navigation-title{
+    display: flex;
+    align-self: flex-start;
+    margin-left: 4vh;
+    margin-top: 3vh;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 10px;
+    color: rgba(243, 243, 243, 0.39);
+    text-transform: uppercase;
+}
+
+#navigation-container > ul > li > a{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: inherit;
+    width: 20vh;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#navigation-container > ul > li > a:hover{
+    transition: 0.7s;
+    color: #00FFB2;
+    font-size: 22px;
+    font-style:bold;
+}
+
+
+/* Content Section */
+.content-container{
+    background-color: #121212;
+    position: relative;
+    height: 100vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+#content-title-container{
+    margin-top: 4vh;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+}
+#content-title-container > h3{
+    color: #BB86FC;
+    margin-left: 3.2vh;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 30px;
+}
+#content-description-container{
+    margin-top: 3vh;
+    width: 80%;
+    margin-left: 6.5vh;
+}
+#content-description-container > h5{
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 10px;
+    color: rgba(243, 243, 243, 0.39);
+    text-transform: uppercase;
+}
+#content-description-container > p{
+    text-align: justify;
+    margin-top: 1vh;
+    color:white;
+    font-family: Roboto;
+    font-size: 16px;
+}
+#video-container{
+    margin-top: 4vh;
+    width: 145vh;
+    height: 70vh;
+}
+#video-container > iframe{
+    margin-left: 6vh;
+    border: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    -webkit-box-shadow: 4px 5px 9px -5px rgba(255,255,255,0.25); 
+    box-shadow: 4px 5px 9px -5px rgba(255,255,255,0.25);
+}
+.list-container{
+    width: 80%;
+    margin-top: 3vh;
+    margin-left: 10vh;
+}
+.list-container > h3{
+    margin-top: 2vh;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 25px;
+    color:#03DAC6;
+
+}
+.ul-procedures{
+    margin-left: 7vh;
+    margin-top: 3.5vh;
+}
+.li-procedure{
+    color:white;
+    font-family: Roboto;
+    font-size: 16px;
+    margin-top: 2vh;
+}
+
+#responsive-menu-icon-container{
+   display: none;  
+}
+
+@media screen and (max-width: 800px) {
+    main{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #navigation-container{
+        background-color: #1D1D1D;
+        height: 100vh;
+        position: absolute;
+        z-index: 1000;
+        left: 0;
+        display: none;
+        width: 30vh;
+    }
+    #navigation-container > ul > li > a{
+        font-size: 12px;
+    }
+    #navigation-title{
+        font-size: 8px;
+        color: rgba(243, 243, 243, 0.39);
+        text-transform: uppercase;
+    }
+    #video-container{
+        margin-top: 2vh;
+        width: 80%;
+        height: 50vh;
+    }
+    #responsive-menu-icon-container{
+        display:block;  
+        background-color: #1f1f1f;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 7vh;
+     }
+     #menuBtn{
+         display: none;
+     }
+     #icon-label{   
+         margin-left: 2.5vh;
+         color: white;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+  }
+ 

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'brownie/styles.css' %}">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Brownie</title>
+</head>
+<body>
+    <div id="responsive-menu-icon-container">
+        <button id="menuBtn" onclick="showMenu()"></button>
+        <label id="icon-label" for="menuBtn"><span class="material-icons">menu</span></label>
+    </div>
+    <main>
+        <div id="navigation-container">
+            <ul>
+                <li id="navigation-title" class="nav-item">Menu de Navegacion</li>
+                <li class="nav-item"><a href="{% url 'index'%}">Video</a></li>
+                <li class="nav-item"><a href="{% url 'informar'%}">Informar</a></li>
+                <li class="nav-item"><a href="{% url 'planificar'%}">Planificar</a></li>
+                <li class="nav-item"><a href="{% url 'decidir'%}">Decidir</a></li>
+                <li class="nav-item"><a href="{% url 'ejecutar'%}">Ejecutar</a></li>
+                <li class="nav-item"><a href="{%url 'controlar'%}">Controlar</a></li>
+                <li class="nav-item"><a href="{%url 'valorar'%}">Valorar</a></li>
+            </ul>
+        </div>
+        <div class="content-container">
+            {% block content%}
+            {% endblock %}
+        </div>
+    </main>
+    <script src="{% static 'brownie/responsive.js' %}"></script>
+</body>
+</html>
